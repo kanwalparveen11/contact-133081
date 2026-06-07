@@ -1,15 +1,15 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import homePage from "./pages/HomePage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 function App () {
   return (
       <Router>
         <Routes>
-          <Route path="/" element={<homePage/>}></Route>
+          <Route path="/" element={<HomePage/>}></Route>
           <Route path="/contacts/:id" element={<contactPage/>}></Route>
-          <Router path="/auth/login" element={<LoginPage/>}></Router>
-          <Router path="*" element={<NotFoundPage/>}></Router>
+          <Route path="/auth/login" element={<LoginPage/>}></Route>
+          <Route path="*" element={<NotFoundPage/>}></Route>
         </Routes>
       </Router>
   );
